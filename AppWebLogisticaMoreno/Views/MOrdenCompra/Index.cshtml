@@ -1,0 +1,46 @@
+﻿@model IEnumerable<AppWebLogisticaMoreno.Models.Entidades.MOrdenCompra>
+<br>
+<h2 class="">Listado OrdenCompra Moreno</h2>
+<br>
+<form>
+
+    <div class="row">
+        <div class="col-3">
+            <input name="FilterbyName" class="form-control form-control-sm"
+                   placeholder="Ingrese el Nombre" />
+        </div>
+        <div class="col-4">
+            <button class="btn btn-primary btn-sm">Buscar</button>
+        </div>
+        <div class="col-6">
+        </div>
+    </div>
+</form>
+<br>
+<table class="table table-hover table-bordered table-sm">
+    <thead>
+        <tr class="table-info">
+            <th><center><strong>idOrdenCompra</strong></center></th>
+            <th><center><strong>Proveedor</strong></center></th>
+            <th><center><strong>Descripcion</strong></center></th>
+            <th><center><strong>UnidadMedia</strong></center></th>
+            <th><center><strong>Cantidad</strong></center></th>
+            <th><center><strong>Precio</strong></center></th>
+        </tr>
+    </thead>
+    <tboby>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td><center>@item.idOrdenCompra</center></td>
+                <td><center>@item.Proveedor</center></td>
+                <td><center>@item.Descripcion</center></td>
+                <td><center>@item.UnidadMedida</center></td>
+                <td><center>@item.Cantidad</center></td>
+                <td><center>@item.Precio</center></td>
+
+            </tr>
+        }
+    </tboby>
+
+</table>
